@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="none" role="img" aria-label="Illustration of a microchip with circuit traces">
+<defs>
+<linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16212f"/><stop offset="1" stop-color="#0f1722"/></linearGradient>
+</defs>
+<g stroke="#243042" stroke-width="2" stroke-linecap="round">
+<path d="M0 90h120l40 40h60"/><path d="M0 160h90l30 30"/><path d="M0 330h110l36-36h40"/><path d="M0 400h150l30-30"/>
+<path d="M480 80h-100l-40 40h-50"/><path d="M480 150h-80l-40 40"/><path d="M480 340h-120l-36-36h-40"/><path d="M480 410h-140l-30-30"/>
+<path d="M120 0v90"/><path d="M200 0v70l30 30"/><path d="M360 0v80"/><path d="M280 480v-60l-24-24"/><path d="M370 480v-90"/><path d="M110 480v-90"/>
+</g>
+<g fill="#0c1119" stroke="#5eead4" stroke-width="2"><circle cx="120" cy="90" r="5"/><circle cx="90" cy="160" r="5"/><circle cx="110" cy="330" r="5"/><circle cx="150" cy="400" r="5"/><circle cx="380" cy="80" r="5"/><circle cx="400" cy="150" r="5"/><circle cx="360" cy="340" r="5"/><circle cx="340" cy="410" r="5"/><circle cx="120" cy="2" r="0"/></g>
+<g stroke="#2c3a50" stroke-width="3" stroke-linecap="round">
+<path d="M150 150v-24M190 150v-24M230 150v-24M270 150v-24M310 150v-24M350 150v-24" transform="translate(-20 0)"/>
+<path d="M130 336v24M170 336v24M210 336v24M250 336v24M290 336v24M330 336v24"/>
+<path d="M140 168h-24M140 208h-24M140 248h-24M140 288h-24"/>
+<path d="M340 168h24M340 208h24M340 248h24M340 288h24"/>
+</g>
+<rect x="140" y="140" width="200" height="200" rx="14" fill="url(#d)" stroke="#5eead4" stroke-width="2"/>
+<rect x="164" y="164" width="152" height="152" rx="6" stroke="#243042" stroke-width="2"/>
+<g stroke="#243042" stroke-width="1.5"><path d="M202 164v152M240 164v152M278 164v152M164 202h152M164 240h152M164 278h152"/></g>
+<path d="M190 276v-36h40v-40h50" stroke="#5eead4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="190" cy="276" r="6" fill="#5eead4"/><circle cx="280" cy="200" r="6" fill="#5eead4"/>
+<rect x="224" y="224" width="32" height="32" rx="4" fill="#0c1119" stroke="#5eead4" stroke-width="2"/>
+<path d="M233 247v-14h14" stroke="#5eead4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="158" cy="154" r="3" fill="#5eead4"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" role="img" aria-label="Illustration of messy CSV rows being cleaned into tidy rows">
+<rect width="400" height="300" fill="#121a26"/>
+<g stroke="#2c3a50" stroke-width="2"><rect x="24" y="52" width="130" height="190" rx="8"/></g>
+<g stroke="#a3afc2" stroke-width="5" stroke-linecap="round" opacity=".6"><path d="M40 78h70M40 98h96M40 118h50M40 138h84M40 158h60M40 178h92M40 198h44M40 218h78"/></g>
+<g stroke="#f59e0b" stroke-width="3" stroke-linecap="round"><path d="M114 98l8 8M122 98l-8 8"/><path d="M96 158l8 8M104 158l-8 8"/></g>
+<path d="M166 147h68" stroke="#5eead4" stroke-width="3" stroke-linecap="round"/><path d="M222 135l14 12-14 12" stroke="#5eead4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="246" y="52" width="130" height="190" rx="8" stroke="#5eead4" stroke-width="2"/>
+<g stroke="#243042" stroke-width="1.5"><path d="M246 90h130M246 128h130M246 166h130M246 204h130M290 52v190M333 52v190"/></g>
+<g stroke="#e8edf4" stroke-width="4" stroke-linecap="round"><path d="M256 71h24M299 71h24M343 71h24M256 109h24M299 109h24M343 109h24M256 147h24M299 147h24M343 147h24M256 185h24M299 185h24M343 185h24M256 223h24M299 223h24M343 223h24"/></g>
+<g font-family="JetBrains Mono,monospace" font-size="11" fill="#a3afc2"><text x="24" y="34">3 h</text><text x="346" y="34" fill="#5eead4">1 s</text><text x="24" y="284">clean · validate · standardize</text></g>
+</svg>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Kamisetty Sai Sravan</title>
+<meta name="description" content="Projects by Kamisetty Sai Sravan: low-power SRAM design, FPGA solar image detection, SafeBuddy tracking app, Rail Aid plugin and a CSV pre-processing tool.">
+<meta name="theme-color" content="#0c1119">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+  <a class="mark" href="index.html"><img src="assets/logo.svg" alt=""><span>Sai Sravan</span></a>
+  <nav aria-label="Primary"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="projects.html" aria-current="page">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+</div></header>
+
+<main id="main">
+  <div class="page-head wrap">
+    <h1>Things I've built.</h1>
+    <p class="prose">From transistor-level layout to FPGA pipelines and mobile apps.</p>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <article class="project">
+        <div class="art"><img src="assets/proj-sram.svg" alt="Layout-style illustration of an SRAM cell" width="400" height="300"></div>
+        <div>
+          <div class="project-head">
+            <h3>Low Power SRAM Design</h3>
+            <a class="src" href="https://github.com/SaiSravanKamisetty/Low-Power-SRAM-Design-using-Cadence-Virtuoso" target="_blank" rel="noopener">Source on GitHub</a>
+          </div>
+          <p>A low-power 10T SRAM cell designed and verified in Cadence Virtuoso. Built first in GPDK90, then migrated to GPDK45 for better power and performance.</p>
+          <ul>
+            <li>Took the cell from schematic to layout, with pre- and post-layout simulations.</li>
+            <li>Ongoing SNM and power analysis; pre-silicon verification with DRC, LVS and parasitic extraction.</li>
+          </ul>
+          <ul class="tags"><li>Cadence Virtuoso</li><li>GPDK90</li><li>GPDK45</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="art"><img src="assets/proj-fpga.svg" alt="Illustration of the sun with filaments and sunspots over a tile grid" width="400" height="300"></div>
+        <div>
+          <div class="project-head">
+            <h3>FPGA-based Solar Filament &amp; Sunspot Detection</h3>
+            <a class="src" href="https://github.com/SaiSravanKamisetty/FPGA-based-Solar-Filament-Sunspot-Detection" target="_blank" rel="noopener">Source on GitHub</a>
+          </div>
+          <p>Real-time analysis of solar H-alpha images on FPGA. Work in progress.</p>
+          <ul>
+            <li>Validated the full pipeline in MATLAB: CLAHE, thresholding and edge detection.</li>
+            <li>Implemented CLAHE with bilinear interpolation in Verilog and simulated it in ModelSim.</li>
+          </ul>
+          <ul class="tags"><li>Verilog</li><li>ModelSim</li><li>MATLAB</li><li>FPGA</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="art"><img src="assets/proj-safebuddy.svg" alt="Illustration of a phone showing a map with a location pin" width="400" height="300"></div>
+        <div>
+          <div class="project-head">
+            <h3>SafeBuddy</h3>
+            <a class="src" href="https://github.com/SaiSravanKamisetty/SafeBuddyApp" target="_blank" rel="noopener">Source on GitHub</a>
+          </div>
+          <p>A Flutter companion app for a SIM-based tracking device.</p>
+          <ul>
+            <li>Dashboard, map view, location history, battery status and a remote ring feature.</li>
+            <li>Parses structured SMS messages from the device and checks each against a stored per-device key before accepting it.</li>
+            <li>Manages multiple devices and keeps location history on the phone.</li>
+          </ul>
+          <ul class="tags"><li>Flutter</li><li>Dart</li><li>SMS</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="art"><img src="assets/proj-rail.svg" alt="Illustration of a railway yard with branching tracks" width="400" height="300"></div>
+        <div>
+          <div class="project-head">
+            <h3>Rail Aid: Yard Configurator Plugin</h3>
+            <span class="src">2025</span>
+          </div>
+          <p>A C++ plugin in Qt Creator that automates railway yard layout configuration, built with object-oriented design for maintainability and reliability.</p>
+          <ul class="tags"><li>C++</li><li>Qt Creator</li><li>Neat Track Planner</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="art"><img src="assets/proj-csv.svg" alt="Illustration of messy CSV rows being cleaned into tidy rows" width="400" height="300"></div>
+        <div>
+          <div class="project-head">
+            <h3>CSV Pre-Processing &amp; Data Handling Tool</h3>
+            <span class="src">2025</span>
+          </div>
+          <p>A C++ tool with Python automation that cleans, validates and standardizes CSV inputs for the Yard Configurator Plugin. It turned a 3-hour manual task into a 1-second one.</p>
+          <ul class="tags"><li>C++</li><li>Qt Creator</li><li>Python</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr">2026</span> Kamisetty Sai Sravan</span><span>Hyderabad, India</span></div></footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
+</body>
+</html>

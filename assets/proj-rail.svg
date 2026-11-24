@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" role="img" aria-label="Illustration of a railway yard with branching tracks and switches">
+<rect width="400" height="300" fill="#121a26"/>
+<g stroke="#2c3a50" stroke-width="3" stroke-linecap="round">
+<path d="M20 150h360"/><path d="M90 150l50-60h240"/><path d="M90 150l50 60h240"/><path d="M200 90l40-40h140"/><path d="M200 210l40 40h140"/>
+</g>
+<g stroke="#5eead4" stroke-width="3" stroke-linecap="round"><path d="M20 150h70l50-60h60l40-40h140"/></g>
+<g stroke="#243042" stroke-width="2"><path d="M40 138v24M60 138v24M80 138v24M120 78v24M150 78v24M180 78v24M260 38v24M300 38v24M340 38v24M120 198v24M150 198v24M180 198v24M280 198v24M320 198v24M360 198v24M240 138v24M290 138v24M340 138v24"/></g>
+<g fill="#0c1119" stroke="#5eead4" stroke-width="2"><circle cx="90" cy="150" r="7"/><circle cx="200" cy="90" r="7"/><circle cx="200" cy="210" r="7"/></g>
+<rect x="300" y="132" width="70" height="36" rx="6" fill="#5eead4" fill-opacity=".12" stroke="#5eead4"/>
+<g font-family="JetBrains Mono,monospace" font-size="11" fill="#a3afc2"><text x="20" y="28">Yard layout · Qt / C++</text><text x="20" y="284">auto-configured from CSV</text></g>
+</svg>

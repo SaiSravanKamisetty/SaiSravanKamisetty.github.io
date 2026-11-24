@@ -6,318 +6,51 @@
 <title>Kamisetty Sai Sravan | VLSI, Embedded Systems &amp; Software</title>
 <meta name="description" content="Portfolio of Kamisetty Sai Sravan: Electronics and Communication Engineering graduate and Intern at Siemens EDA, working across VLSI, embedded systems and software.">
 <meta name="theme-color" content="#0c1119">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-weight:200 800;font-display:swap;src:url("assets/fonts/bricolage-grotesque-latin.woff2") format("woff2")}
-@font-face{font-family:"Figtree";font-style:normal;font-weight:300 900;font-display:swap;src:url("assets/fonts/figtree-latin.woff2") format("woff2")}
-
-:root{
-  --bg:#0c1119;
-  --surface:#121a26;
-  --line:#243042;
-  --text:#e8edf4;
-  --muted:#a3afc2;
-  --accent:#5eead4;
-  --accent-ink:#04201b;
-  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
-  --body:"Figtree","Segoe UI",system-ui,sans-serif;
-  --ease:cubic-bezier(.16,1,.3,1);
-  color-scheme:dark;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px;scrollbar-color:#2c3a50 var(--bg);scrollbar-width:thin}
-body{font-family:var(--body);font-size:1.0625rem;line-height:1.65;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-::selection{background:var(--accent);color:var(--accent-ink)}
-a{color:inherit;text-decoration-color:rgba(94,234,212,.5);text-underline-offset:.22em;text-decoration-thickness:1px}
-a:hover{color:var(--accent);text-decoration-color:var(--accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
-.skip{position:absolute;left:16px;top:-60px;background:var(--accent);color:var(--accent-ink);padding:8px 14px;border-radius:6px;font-weight:600;z-index:30;text-decoration:none}
-.skip:focus{top:12px;color:var(--accent-ink)}
-
-.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
-
-.site-header{position:sticky;top:0;z-index:20;background:rgba(12,17,25,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
-.mark{font-family:var(--display);font-weight:700;font-size:1.1rem;text-decoration:none;letter-spacing:-.01em}
-nav ul{display:flex;gap:4px;list-style:none;flex-wrap:wrap}
-nav a{display:block;padding:8px 12px;font-size:.95rem;color:var(--muted);text-decoration:none;border-radius:6px;transition:color .2s}
-nav a:hover{color:var(--text)}
-
-.hero{padding-top:clamp(72px,14vw,150px);padding-bottom:clamp(56px,9vw,100px)}
-.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.8rem,9vw,6rem);line-height:1;letter-spacing:-.035em;text-wrap:balance;max-width:11ch}
-.hero .role{margin-top:clamp(20px,3vw,32px);font-family:var(--display);font-size:clamp(1.2rem,2.6vw,1.6rem);font-weight:500;max-width:34ch;text-wrap:balance}
-.hero .role em{font-style:normal;color:var(--accent)}
-.hero .lede{margin-top:16px;color:var(--muted);max-width:56ch}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
-.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:8px;border:1px solid var(--line);font-weight:600;font-size:1rem;text-decoration:none;color:var(--text);transition:border-color .2s,background .2s,transform .2s var(--ease)}
-.btn:hover{border-color:var(--accent);color:var(--text);background:var(--surface)}
-.btn:active{transform:translateY(1px)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.btn.primary:hover{background:#7ff0de;border-color:#7ff0de;color:var(--accent-ink)}
-
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-.hero > *{animation:rise .9s var(--ease) backwards}
-.hero .role{animation-delay:.1s}
-.hero .lede{animation-delay:.18s}
-.hero .actions{animation-delay:.26s}
-
-section{border-top:1px solid var(--line);padding:clamp(48px,8vw,88px) 0}
-.split{display:grid;grid-template-columns:minmax(150px,230px) 1fr;gap:clamp(24px,5vw,64px)}
-h2{font-family:var(--display);font-weight:700;font-size:1.5rem;letter-spacing:-.015em;line-height:1.2}
-.split > h2{position:sticky;top:96px;align-self:start}
-.prose{max-width:62ch;color:var(--muted)}
-.prose p + p{margin-top:1em}
-.prose strong{color:var(--text);font-weight:600}
-.facts{margin-top:32px;display:grid;gap:10px;color:var(--muted);font-size:.98rem}
-.facts div{display:flex;gap:14px}
-.facts dt{min-width:84px;color:var(--text);font-weight:600}
-
-.row{display:grid;grid-template-columns:150px 1fr;gap:8px 28px;padding:28px 0;border-top:1px solid var(--line)}
-.row:first-child{border-top:0;padding-top:0}
-.when{color:var(--muted);font-size:.95rem;font-variant-numeric:tabular-nums;padding-top:.25em}
-h3{font-family:var(--display);font-weight:600;font-size:1.25rem;line-height:1.3;letter-spacing:-.01em}
-.org{color:var(--muted);font-size:.98rem;margin-top:2px}
-.row ul{margin-top:12px;padding-left:1.1em;color:var(--muted)}
-.row li{margin-bottom:6px;max-width:64ch}
-.row li::marker,.project li::marker{color:#4a5a73}
-.now{display:inline-block;margin-left:8px;padding:1px 10px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font-family:var(--body);font-size:.78rem;font-weight:600;letter-spacing:.02em;vertical-align:.18em}
-
-.project{padding:30px 0;border-top:1px solid var(--line)}
-.project:first-child{border-top:0;padding-top:0}
-.project-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 20px}
-.project.lead h3{font-size:clamp(1.6rem,3.4vw,2.1rem);font-weight:700;letter-spacing:-.02em}
-.src{font-size:.95rem;color:var(--muted)}
-.project p{margin-top:10px;color:var(--muted);max-width:64ch}
-.project ul{margin-top:10px;padding-left:1.1em;color:var(--muted);max-width:64ch}
-.project li{margin-bottom:6px}
-.project ul.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;list-style:none;padding:0;max-width:none}
-.tags li{margin:0;padding:3px 12px;border:1px solid var(--line);border-radius:999px;font-size:.84rem;color:var(--text)}
-
-.skill-list{display:grid}
-.skill-list div{display:grid;grid-template-columns:210px 1fr;gap:6px 28px;padding:16px 0;border-top:1px solid var(--line)}
-.skill-list div:first-child{border-top:0;padding-top:0}
-.skill-list dt{font-weight:600}
-.skill-list dd{color:var(--muted)}
-
-.contact h2{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;max-width:16ch;text-wrap:balance}
-.contact .prose{margin-top:20px}
-.mail{display:inline-block;margin-top:28px;font-family:var(--display);font-size:clamp(1.15rem,3.4vw,1.8rem);font-weight:600;word-break:break-word}
-
-footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.9rem}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-
-@media (max-width:760px){
-  .split{grid-template-columns:1fr}
-  .split > h2{position:static}
-  .row{grid-template-columns:1fr}
-  .when{padding-top:0}
-  .skill-list div{grid-template-columns:1fr}
-  .site-header .wrap{flex-wrap:nowrap}
-  nav{overflow-x:auto;scrollbar-width:none}
-  nav ul{flex-wrap:nowrap;white-space:nowrap}
-  nav a{padding:8px 9px}
-  .mark{white-space:nowrap}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .hero > *{animation:none}
-  *{transition:none!important}
-}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
-<header class="site-header">
-  <div class="wrap">
-    <a class="mark" href="#top">Sai Sravan</a>
-    <nav aria-label="Primary">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<header class="site-header"><div class="wrap">
+  <a class="mark" href="index.html"><img src="assets/logo.svg" alt=""><span>Sai Sravan</span></a>
+  <nav aria-label="Primary"><ul>
+    <li><a href="index.html" aria-current="page">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+</div></header>
 
 <main id="main">
-  <div class="hero wrap" id="top">
-    <h1>Kamisetty Sai Sravan</h1>
-    <p class="role">Intern at <em>Siemens EDA</em>, working across VLSI, embedded systems and software.</p>
-    <p class="lede">ECE graduate from VIT, based in Hyderabad. I design chips, write firmware and build tools, and I'm open to all roles, developer roles included.</p>
-    <div class="actions">
-      <a class="btn primary" href="resume.html" target="_blank" rel="noopener">View resume</a>
-      <a class="btn" href="https://github.com/SaiSravanKamisetty" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn" href="https://linkedin.com/in/sai-sravan-kamisetty" target="_blank" rel="noopener">LinkedIn</a>
+  <div class="hero wrap">
+    <div class="hero-copy">
+      <h1>Kamisetty Sai Sravan</h1>
+      <p class="role">Intern at <em>Siemens EDA</em>, working across VLSI, embedded systems and software.</p>
+      <p class="lede">ECE graduate from VIT, based in Hyderabad. I design chips, write firmware and build tools, and I'm open to all roles, developer roles included.</p>
+      <div class="actions">
+        <a class="btn primary" href="projects.html">See my projects</a>
+        <a class="btn" href="resume.html" target="_blank" rel="noopener">Resume</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </div>
     </div>
+    <img class="hero-art" src="assets/hero.svg" alt="Illustration of a microchip with circuit traces" width="480" height="480">
   </div>
 
-  <section id="about">
-    <div class="wrap split">
-      <h2>About</h2>
-      <div>
-        <div class="prose">
-          <p>I'm an Electronics and Communication Engineering graduate from Vellore Institute of Technology and currently an intern at <strong>Siemens EDA, Hyderabad</strong>. My foundation is in VLSI and embedded systems, and I've added hands-on software experience, including AI-assisted development.</p>
-          <p>I learn new tools and methodologies quickly and commit fully in dynamic environments. Until January 2026 I chaired the VIT Film Society, leading 1,400+ members.</p>
-        </div>
-        <dl class="facts">
-          <div><dt>Education</dt><dd>B.Tech, Electronics and Communication Engineering, VIT · 2022–2026 · CGPA 9.02 / 10</dd></div>
-          <div><dt>Coursework</dt><dd>VLSI, Embedded Systems, Software Development</dd></div>
-        </dl>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="wrap split">
-      <h2>Experience</h2>
-      <div>
-        <article class="row">
-          <div class="when">Jan 2026 – Present</div>
-          <div>
-            <h3>Intern <span class="now">Current</span></h3>
-            <p class="org">Siemens EDA · Hyderabad, IN</p>
-          </div>
-        </article>
-        <article class="row">
-          <div class="when">May – June 2025</div>
-          <div>
-            <h3>Trainee Embedded Engineer</h3>
-            <p class="org">Quadrant Future Tek Ltd · Hyderabad, IN</p>
-            <ul>
-              <li>Developed firmware for ADAM (Automatic Distance and Approach Management) pressure sensor cards.</li>
-              <li>Built the Yard Configurator Plugin for the Railway Track Planner (Rail Aid).</li>
-              <li>Developed a CSV pre-processing application for the Configurator Plugin.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="row">
-          <div class="when">June 2024</div>
-          <div>
-            <h3>Trainee Embedded Engineer</h3>
-            <p class="org">Zoraiz Embedded Systems · Hyderabad, IN</p>
-            <ul>
-              <li>Designed schematics for IoT modules using LoRa and ESP32.</li>
-              <li>Ran functional, integration and hardware validation testing, gaining exposure to silicon validation workflows.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="row">
-          <div class="when">Jan 2025 – Jan 2026</div>
-          <div>
-            <h3>Chairperson</h3>
-            <p class="org">VIT Film Society · VIT University</p>
-            <ul>
-              <li>Led one of the university's largest A-listed clubs, with 1,400+ members, overseeing events, operations and student engagement.</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="wrap split">
-      <h2>Projects</h2>
-      <div>
-        <article class="project lead">
-          <div class="project-head">
-            <h3>Low Power SRAM Design</h3>
-            <a class="src" href="https://github.com/SaiSravanKamisetty/Low-Power-SRAM-Design-using-Cadence-Virtuoso" target="_blank" rel="noopener">Source on GitHub</a>
-          </div>
-          <p>A low-power 10T SRAM cell designed and verified in Cadence Virtuoso. Built first in GPDK90, then migrated to GPDK45 for better power and performance.</p>
-          <ul>
-            <li>Took the cell from schematic to layout, with pre- and post-layout simulations.</li>
-            <li>Ongoing SNM and power analysis; pre-silicon verification with DRC, LVS and parasitic extraction.</li>
-          </ul>
-          <ul class="tags"><li>Cadence Virtuoso</li><li>GPDK90</li><li>GPDK45</li></ul>
-        </article>
-
-        <article class="project">
-          <div class="project-head">
-            <h3>FPGA-based Solar Filament &amp; Sunspot Detection</h3>
-            <a class="src" href="https://github.com/SaiSravanKamisetty/FPGA-based-Solar-Filament-Sunspot-Detection" target="_blank" rel="noopener">Source on GitHub</a>
-          </div>
-          <p>Real-time analysis of solar H-alpha images on FPGA. Work in progress.</p>
-          <ul>
-            <li>Validated the full pipeline in MATLAB: CLAHE, thresholding and edge detection.</li>
-            <li>Implemented CLAHE with bilinear interpolation in Verilog and simulated it in ModelSim.</li>
-          </ul>
-          <ul class="tags"><li>Verilog</li><li>ModelSim</li><li>MATLAB</li><li>FPGA</li></ul>
-        </article>
-
-        <article class="project">
-          <div class="project-head">
-            <h3>SafeBuddy</h3>
-            <a class="src" href="https://github.com/SaiSravanKamisetty/SafeBuddyApp" target="_blank" rel="noopener">Source on GitHub</a>
-          </div>
-          <p>A Flutter companion app for a SIM-based tracking device.</p>
-          <ul>
-            <li>Dashboard, map view, location history, battery status and a remote ring feature.</li>
-            <li>Parses structured SMS messages from the device and checks each against a stored per-device key before accepting it.</li>
-            <li>Manages multiple devices and keeps location history on the phone.</li>
-          </ul>
-          <ul class="tags"><li>Flutter</li><li>Dart</li><li>SMS</li></ul>
-        </article>
-
-        <article class="project">
-          <div class="project-head">
-            <h3>Rail Aid: Yard Configurator Plugin</h3>
-            <span class="src">2025</span>
-          </div>
-          <p>A C++ plugin in Qt Creator that automates railway yard layout configuration, built with object-oriented design for maintainability and reliability.</p>
-          <ul class="tags"><li>C++</li><li>Qt Creator</li><li>Neat Track Planner</li></ul>
-        </article>
-
-        <article class="project">
-          <div class="project-head">
-            <h3>CSV Pre-Processing &amp; Data Handling Tool</h3>
-            <span class="src">2025</span>
-          </div>
-          <p>A C++ tool with Python automation that cleans, validates and standardizes CSV inputs for the Yard Configurator Plugin. It turned a 3-hour manual task into a 1-second one.</p>
-          <ul class="tags"><li>C++</li><li>Qt Creator</li><li>Python</li></ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap split">
-      <h2>Skills</h2>
-      <dl class="skill-list">
-        <div><dt>Programming &amp; scripting</dt><dd>Python, C++, C, Java, Embedded C, MATLAB, Verilog HDL</dd></div>
-        <div><dt>Verification &amp; debugging</dt><dd>Testbench development, SystemVerilog, QuestaSim, ModelSim</dd></div>
-        <div><dt>Digital &amp; logic design</dt><dd>RTL design, digital circuit design, static timing analysis</dd></div>
-        <div><dt>Tools &amp; methodologies</dt><dd>ASIC design flow, FPGA prototyping, Intel Quartus Prime, Cadence Virtuoso</dd></div>
-        <div><dt>Additional</dt><dd>AI-assisted development, Qt, Flutter, Android Studio</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
+  <div class="band">
     <div class="wrap">
-      <h2>Let's work together.</h2>
-      <p class="prose">Open to design, verification, embedded and software development roles.</p>
-      <a class="mail" href="mailto:leosravan2004@gmail.com">leosravan2004@gmail.com</a>
-      <div class="actions">
-        <a class="btn" href="https://linkedin.com/in/sai-sravan-kamisetty" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/SaiSravanKamisetty" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="resume.html" target="_blank" rel="noopener">Resume</a>
-      </div>
+      <nav class="signpost" aria-label="Site sections">
+        <a href="about.html"><span class="t">About</span><span class="d">Background, education and the skills I work with.</span><span class="go">about →</span></a>
+        <a href="experience.html"><span class="t">Experience</span><span class="d">Siemens EDA and two embedded engineering traineeships.</span><span class="go">experience →</span></a>
+        <a href="projects.html"><span class="t">Projects</span><span class="d">An SRAM cell, an FPGA vision pipeline, a tracking app and more.</span><span class="go">projects →</span></a>
+        <a href="contact.html"><span class="t">Contact</span><span class="d">Email, LinkedIn and GitHub.</span><span class="go">contact →</span></a>
+      </nav>
     </div>
-  </section>
+  </div>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© <span id="yr">2026</span> Kamisetty Sai Sravan</span>
-    <span>Hyderabad, India</span>
-  </div>
-</footer>
+<footer><div class="wrap"><span>© <span id="yr">2026</span> Kamisetty Sai Sravan</span><span>Hyderabad, India</span></div></footer>
 <script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
 </body>
 </html>
