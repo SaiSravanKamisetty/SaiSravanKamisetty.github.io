@@ -26,11 +26,45 @@
 <main id="main">
   <div class="page-head wrap">
     <h1>Things I've built.</h1>
-    <p class="prose">From transistor-level layout to FPGA pipelines and mobile apps.</p>
+    <p class="prose">Test automation at Siemens EDA, transistor-level layout, FPGA pipelines and mobile apps.</p>
   </div>
 
   <div class="section">
     <div class="wrap">
+      <article class="project">
+        <div class="art"><img src="assets/proj-acu.svg" alt="Diagram of a controller dispatching test phases to a server machine and a client machine" width="400" height="300"></div>
+        <div>
+          <div class="project-head">
+            <h3>Auto-Client Update Automation</h3>
+            <span class="src">Siemens EDA · 2026</span>
+          </div>
+          <p>An end-to-end platform that automatically installs, updates, smoke-tests and uninstalls the Capital software across server and client machines, so every release is checked without manual effort.</p>
+          <ul>
+            <li>FastAPI job queue, orchestrator, and Ansible over WinRM driving Windows machines.</li>
+            <li>CSV-driven test framework with reusable steps, expected-failure steps and warning detection.</li>
+          </ul>
+          <ul class="tags"><li>Python</li><li>FastAPI</li><li>Ansible</li><li>WinRM</li></ul>
+          <a class="read-more" href="project-acu.html">Read the write-up →</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="art"><img src="assets/proj-golden.svg" alt="Diagram of a loop that submits tests, updates reference files, commits and re-runs" width="400" height="300"></div>
+        <div>
+          <div class="project-head">
+            <h3>Automatic Golden Updates</h3>
+            <span class="src">Siemens EDA · 2026 · Proof of concept</span>
+          </div>
+          <p>A tool that refreshes reference files for UI automation tests after an intentional product change. It reruns failing tests and commits updates until nothing fails, replacing days of manual work after a platform upgrade.</p>
+          <ul>
+            <li>Handles PNG, PDF and DXF comparisons, with Jenkins submission, polling and Git commits.</li>
+            <li>Stops safely when failures don't look golden-related.</li>
+          </ul>
+          <ul class="tags"><li>Python</li><li>Jenkins</li><li>Git</li><li>Selenium</li></ul>
+          <a class="read-more" href="project-golden.html">Read the write-up →</a>
+        </div>
+      </article>
+
       <article class="project">
         <div class="art"><img src="assets/proj-sram.svg" alt="Layout-style illustration of an SRAM cell" width="400" height="300"></div>
         <div>
@@ -111,3 +145,4 @@
 <script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
 </body>
 </html>
+

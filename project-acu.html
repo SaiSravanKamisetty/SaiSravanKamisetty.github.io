@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto-Client Update Automation | Kamisetty Sai Sravan</title>
+<meta name="description" content="Write-up of an end-to-end install, update and uninstall test automation platform built at Siemens EDA.">
+<meta name="theme-color" content="#0c1119">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+  <a class="mark" href="index.html"><img src="assets/logo.svg" alt=""><span>Sai Sravan</span></a>
+  <nav aria-label="Primary"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="projects.html" aria-current="page">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+</div></header>
+
+<main id="main">
+  <div class="page-head wrap">
+    <a class="back" href="projects.html">← All projects</a>
+    <h1>Auto-Client Update Automation</h1>
+    <p class="prose">An automated way to check that installing, updating and uninstalling a large engineering software product keeps working, release after release.</p>
+    <div class="case-meta"><span><b>Where</b> Siemens EDA, Platform Framework team</span><span><b>Role</b> Intern</span><span><b>Stack</b> Python, FastAPI, Ansible, WinRM</span></div>
+    <img class="case-art" src="assets/proj-acu.svg" alt="Diagram of a controller dispatching test phases to a server machine and a client machine" width="400" height="300">
+  </div>
+
+  <div class="section">
+    <div class="wrap case">
+      <section>
+        <h2>The problem</h2>
+        <p>Every new release or service pack of the Capital software has to be installable on top of an existing installation without breaking applications, licenses or configuration. The product's built-in client update mechanism pushes these updates to client machines, so it has to be verified before each release.</p>
+        <p>Doing that by hand means installing, updating, running smoke tests and uninstalling on several machines. It is slow, repetitive and easy to get wrong.</p>
+      </section>
+
+      <section>
+        <h2>What it does</h2>
+        <p>The platform runs the whole cycle on demand and reports the result: install, installation smoke test, application smoke test, uninstall. It runs across a Windows server and a Windows client virtual machine, so regressions show up early instead of after a customer finds them.</p>
+      </section>
+
+      <section>
+        <h2>How it's built</h2>
+        <ul>
+          <li><strong>Web wrapper.</strong> A FastAPI app lets a user submit a run, upload a setup file, watch a job queue and download logs and artefacts. A single background worker runs queued jobs, and job state is rebuilt from disk after a restart, so no database is needed.</li>
+          <li><strong>Orchestrator.</strong> A command-line driver, run once per test suite, deploys the automation to each machine, builds the list of phases, runs them in order and writes a report. If a phase fails, it stops, runs a cleanup uninstall, collects logs from every machine and exits with a distinct code for pass, fail or pass with warnings.</li>
+          <li><strong>Ansible bridge.</strong> The Linux controller talks to the Windows machines through Ansible playbooks over WinRM. UI tests need an interactive desktop, so each test run is launched as a Windows scheduled task rather than a plain remote command.</li>
+          <li><strong>Machine-side framework.</strong> Tests are written as readable CSV files. Each row names a Python function and its arguments. A row can be expected to fail, which makes negative tests simple, and one CSV can call another so common steps are written once.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Two execution flows</h2>
+        <ol>
+          <li><strong>General flow.</strong> A fixed sequence: install on both machines in parallel, then the installation and application smoke tests one machine at a time, then uninstall in parallel.</li>
+          <li><strong>Release-candidate flow.</strong> Install, then smoke-test pairs that are discovered automatically by matching numbers in the server and client test file names, then uninstall.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Reporting</h2>
+        <p>Every step records a pass or fail as it runs. The framework treats a clean return, <code>True</code>, zero or words like "OK" as a pass, and applies the opposite rule to steps marked as expected failures. Steps that succeed but raise a warning, for example a background process still shutting down, don't stop the suite. They mark it as "passed with warnings" so someone can review them.</p>
+        <p>Each suite produces a JSON report with the overall status, timings and per-phase results, plus the collected logs.</p>
+      </section>
+
+      <section>
+        <h2>Design notes</h2>
+        <ul>
+          <li>Credentials are kept out of the codebase, in the inventory and variable files.</li>
+          <li>The in-memory job registry suits a single worker. It would need locking before scaling to several.</li>
+          <li>Long-running tasks have a roughly two-hour wait budget, with no signal yet to tell a slow task from a stalled one.</li>
+        </ul>
+        <p class="note">This is a high-level write-up of internal work. The code isn't public, and names, hosts and paths are left out on purpose.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr">2026</span> Kamisetty Sai Sravan</span><span>Hyderabad, India</span></div></footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
+</body>
+</html>

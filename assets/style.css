@@ -135,6 +135,26 @@ h3{font-weight:600;font-size:1.25rem;line-height:1.3;letter-spacing:-.01em}
 .contact-list div{display:grid;grid-template-columns:120px 1fr;gap:6px 20px;padding:16px 0;border-top:1px solid var(--line)}
 .contact-list dt{color:var(--muted)}
 
+/* case study */
+.back{display:inline-block;margin-bottom:24px;color:var(--muted);font-size:.95rem;text-decoration:none}
+.back:hover{color:var(--accent)}
+.case-meta{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:22px;color:var(--muted);font-size:.95rem}
+.case-meta b{color:var(--text);font-weight:600}
+.case-art{margin-top:36px;max-width:520px}
+.case > section{max-width:70ch}
+.case section + section{margin-top:44px}
+.case h2{margin-bottom:14px}
+.case p{color:var(--muted)}
+.case p + p,.case p + ul,.case ul + p,.case p + ol{margin-top:12px}
+.case ul,.case ol{padding-left:1.2em;color:var(--muted)}
+.case li{margin-bottom:8px}
+.case li::marker{color:#4a5a73}
+.case ol li::marker{color:var(--accent);font-family:var(--mono);font-size:.85em}
+.case strong{color:var(--text);font-weight:600}
+.case .note{margin-top:14px;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--muted);font-size:.95rem}
+.read-more{display:inline-block;margin-top:14px;font-weight:600}
+.src.tag-siemens{font-family:var(--mono);font-size:.78rem}
+
 footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.9rem}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 

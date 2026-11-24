@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" role="img" aria-label="Diagram of a controller dispatching test phases to a server machine and a client machine">
+<rect width="400" height="300" fill="#121a26"/>
+<rect x="24" y="110" width="104" height="80" rx="8" stroke="#5eead4" stroke-width="2" fill="#0c1119"/>
+<g stroke="#2c3a50" stroke-width="2" stroke-linecap="round"><path d="M40 134h72M40 150h52M40 166h64"/></g>
+<rect x="272" y="40" width="104" height="80" rx="8" stroke="#2c3a50" stroke-width="2" fill="#0c1119"/>
+<rect x="272" y="180" width="104" height="80" rx="8" stroke="#2c3a50" stroke-width="2" fill="#0c1119"/>
+<rect x="284" y="52" width="80" height="44" rx="3" stroke="#243042"/><rect x="284" y="192" width="80" height="44" rx="3" stroke="#243042"/>
+<path d="M128 140c50 0 60-60 144-60" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 6"/>
+<path d="M128 160c50 0 60 60 144 60" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 6"/>
+<g fill="#5eead4"><circle cx="272" cy="80" r="4"/><circle cx="272" cy="220" r="4"/></g>
+<g stroke="#5eead4" stroke-width="2" stroke-linecap="round"><path d="M296 74h20M296 84h34M296 214h28M296 224h16"/></g>
+<g font-family="JetBrains Mono,monospace" font-size="11" fill="#a3afc2"><text x="24" y="28">install · smoke · uninstall</text><text x="38" y="208">master</text><text x="300" y="138">server VM</text><text x="304" y="278">client VM</text><text x="24" y="284">CSV-driven · parallel / sequential</text></g>
+</svg>
